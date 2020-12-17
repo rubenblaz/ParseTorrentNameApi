@@ -19,7 +19,7 @@ def parse():
     """
     filenames = request.get_json()
     filenames = PTN.parse(filenames)
-    if len(filenames==1):
+    if len(filenames)==1:
         pretty_names = {filename:filenames}
     else:
         pretty_names = {filename:filename for filename in filenames}
