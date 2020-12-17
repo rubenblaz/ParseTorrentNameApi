@@ -17,13 +17,10 @@ def parse():
     Receives a list of strings and returns objects containing the scene information
     For more information on the name parsing see https://github.com/divijbindlish/parse-torrent-name
     """
-    filenames = request.get_json()
-    print(filenames)
-    split = filenames.split(',')
-    if len(split)==1:
-        pretty_names = {filename: PTN.parse(filenames)}
-    else:
-        pretty_names = {filename: PTN.parse(name) for name in filenames}
+    filename = request.get_json()
+    print(filename)
+    
+    pretty_names = PTN.parse(filenames)
 
     return jsonify(pretty_names)
 
