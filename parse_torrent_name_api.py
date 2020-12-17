@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route('/parse', methods=['GET'])
 def parse():
+    print('eee')
     """
     Endpoint for parsing a list of torrent names for scene information
 
