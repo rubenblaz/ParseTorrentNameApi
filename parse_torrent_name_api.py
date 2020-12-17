@@ -19,11 +19,11 @@ def parse():
     """
     filenames = request.get_json()
     print(filenames)
-    filenames = PTN.parse(filenames)
-    if len(filenames)==1:
-        pretty_names = {filename:filenames}
+    split = filenames.split(',')
+    if len(split)==1:
+        pretty_names = {filename: PTN.parse(filenames)}
     else:
-        pretty_names = {filename:filename for filename in filenames}
+        pretty_names = {filename: PTN.parse(filename) for filename in filenames}
 
     return jsonify(pretty_names)
 
