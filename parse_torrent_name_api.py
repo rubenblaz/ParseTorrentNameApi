@@ -18,6 +18,7 @@ def parse():
     For more information on the name parsing see https://github.com/divijbindlish/parse-torrent-name
     """
     filenames = request.get_json()
+    print(filenames)
     filenames = PTN.parse(filenames)
     if len(filenames)==1:
         pretty_names = {filename:filenames}
