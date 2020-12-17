@@ -9,7 +9,7 @@ import PTN
 
 app = Flask(__name__)
 @app.route('/parse', methods=['GET'])
-def parse():
+def parseGET():
     print('GETTTTTTT')
     
 @app.route('/parse', methods=['POST'])
