@@ -1,4 +1,4 @@
-setuptools==45.3.0
+setuptools==45.0.0
 click==6.7
 Flask==1.0
 itsdangerous==0.24
