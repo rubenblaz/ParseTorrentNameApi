@@ -8,14 +8,9 @@ from flask import Flask, jsonify, request
 import PTN
 import os
 
-app = Flask(__name__)
-@app.route('/parse', methods=['GET'])
-def parseGET():
-    print('GETTTTTTT')
-    
+app = Flask(__name__)    
 @app.route('/parse', methods=['POST'])
 def parse():
-    print('POSTTTTTTTTT')
     """
     Endpoint for parsing a list of torrent names for scene information
 
@@ -24,7 +19,7 @@ def parse():
     """
     filenames = request.get_json()
 
-    pretty_names = {filename:PTN.parse(filename) for filename in filenames}
+    pretty_names = {filename:PTN.parse(filenames)}
 
     return jsonify(pretty_names)
 
