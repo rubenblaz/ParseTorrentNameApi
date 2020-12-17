@@ -23,7 +23,7 @@ def parse():
     if len(split)==1:
         pretty_names = {filename: PTN.parse(filenames)}
     else:
-        pretty_names = {filename: PTN.parse(filename) for filename in filenames}
+        pretty_names = {filename: PTN.parse(name) for name in filenames}
 
     return jsonify(pretty_names)
 
