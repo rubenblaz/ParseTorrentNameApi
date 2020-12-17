@@ -6,6 +6,7 @@ with other programming languages that do not have the same library.
 """
 from flask import Flask, jsonify, request
 import PTN
+import os
 
 app = Flask(__name__)
 @app.route('/parse', methods=['GET'])
