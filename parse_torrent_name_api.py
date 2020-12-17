@@ -20,7 +20,7 @@ def parse():
     filename = request.get_json()
     print(filename)
     
-    pretty_names = PTN.parse(filenames)
+    pretty_names = PTN.parse(filename)
 
     return jsonify(pretty_names)
 
