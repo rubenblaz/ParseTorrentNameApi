@@ -5,8 +5,9 @@ Provides an API for parsing torrent names as a micro-service, primarily for use
 with other programming languages that do not have the same library.
 """
 from flask import Flask, jsonify, request
-import PTN
+#import PTN
 import os
+from guessit import guessit
 
 app = Flask(__name__)    
 @app.route('/parse', methods=['POST'])
@@ -20,8 +21,8 @@ def parse():
     filename = request.get_json()
     print(filename)
     
-    pretty_names = PTN.parse(filename)
-
+    #pretty_names = PTN.parse(filename)
+    pretty_names = guessit(filename)
     return jsonify(pretty_names)
 
 if __name__ == '__main__':
