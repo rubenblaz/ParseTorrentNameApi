@@ -8,10 +8,13 @@ from flask import Flask, jsonify, request
 import PTN
 
 app = Flask(__name__)
-
 @app.route('/parse', methods=['GET'])
 def parse():
-    print('eee')
+    print('GETTTTTTT')
+    
+@app.route('/parse', methods=['POST'])
+def parse():
+    print('POSTTTTTTTTT')
     """
     Endpoint for parsing a list of torrent names for scene information
 
