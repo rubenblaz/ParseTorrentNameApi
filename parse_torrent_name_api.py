@@ -9,7 +9,7 @@ import PTN
 
 app = Flask(__name__)
 
-@app.route('/parse', methods=['POST'])
+@app.route('/parse', methods=['GET'])
 def parse():
     """
     Endpoint for parsing a list of torrent names for scene information
