@@ -23,7 +23,7 @@ def parse():
     
     #pretty_names = PTN.parse(filename)
     pretty_names = guessit(filename)
-    pretty_names = {k: v for k, v in res.items() if 'language' in v}
+    pretty_names = {k: v for k, v in pretty_names.items() if 'language' in v}
     print(pretty_names)
     #aux = pretty_names.split(', ')
     return jsonify(pretty_names)
