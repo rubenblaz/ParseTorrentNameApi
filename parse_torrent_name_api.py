@@ -24,7 +24,7 @@ def parse():
     #pretty_names = PTN.parse(filename)
     pretty_names = guessit(filename)
     pretty_names.pop('language', None) 
-    pretty_names.pop('Country', None) 
+    pretty_names.pop('country', None) 
     print(pretty_names)
     #aux = pretty_names.split(', ')
     return jsonify(pretty_names)
