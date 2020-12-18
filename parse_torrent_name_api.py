@@ -24,6 +24,9 @@ def parse():
     #pretty_names = PTN.parse(filename)
     pretty_names = guessit(filename)
     print(pretty_names)
+    #aux = pretty_names.split(', ')
+    for item in pretty_names:
+        print(item)
     return jsonify(pretty_names)
 
 if __name__ == '__main__':
